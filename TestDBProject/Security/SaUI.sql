@@ -1,0 +1,2 @@
+﻿CREATE USER [SaUI] FOR LOGIN [SaUI];
+

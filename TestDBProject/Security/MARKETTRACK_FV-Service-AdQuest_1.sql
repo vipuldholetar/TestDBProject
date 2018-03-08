@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [MARKETTRACK\FV-Service-AdQuest]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

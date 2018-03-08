@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[OccurrenceCostTVLog] (
+    [LogTimeStamp]                     DATETIME     NULL,
+    [LogDMLOperation]                  CHAR (1)     NULL,
+    [LoginUser]                        VARCHAR (32) NULL,
+    [OccurrenceCostTVID]               INT          NULL,
+    [OccurenceClientFacingTVID]        INT          NULL,
+    [OldVal_OccurenceClientFacingTVID] INT          NULL,
+    [DayPartID]                        INT          NULL,
+    [OldVal_DayPartID]                 INT          NULL,
+    [Cost]                             DECIMAL (18) NULL,
+    [OldVal_Cost]                      DECIMAL (18) NULL,
+    [60SecondRate]                     INT          NULL,
+    [OldVal_60SecondRate]              INT          NULL,
+    [CostModelID]                      INT          NULL,
+    [OldVal_CostModelID]               INT          NULL,
+    [CreatedDT]                        DATETIME     NULL,
+    [OldVal_CreatedDT]                 DATETIME     NULL,
+    [CreatedByID]                      INT          NULL,
+    [OldVal_CreatedByID]               INT          NULL,
+    [ModifiedDT]                       DATETIME     NULL,
+    [OldVal_ModifiedDT]                DATETIME     NULL,
+    [ModifiedByID]                     INT          NULL,
+    [OldVal_ModifiedByID]              INT          NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

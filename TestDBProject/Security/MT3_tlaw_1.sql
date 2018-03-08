@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [MT3\tlaw]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

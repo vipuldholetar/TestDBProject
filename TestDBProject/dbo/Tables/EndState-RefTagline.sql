@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[EndState-RefTagline] (
+    [TGL_SEQ]     VARCHAR (50)  NULL,
+    [TGL_INSTCOD] VARCHAR (50)  NULL,
+    [TGL_TAGLINE] VARCHAR (100) NULL,
+    [TGL_DISPLAY] VARCHAR (50)  NULL
+);
+

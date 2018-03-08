@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[AdvertiserMapLog] (
+    [LogTimeStamp]           DATETIME     NULL,
+    [LogDMLOperation]        CHAR (1)     NULL,
+    [LoginUser]              VARCHAR (32) NULL,
+    [AdvertiserMapID]        INT          NULL,
+    [RCSAdvertiserID]        INT          NULL,
+    [OldVal_RCSAdvertiserID] INT          NULL,
+    [AdvID]                  INT          NULL,
+    [OldVal_AdvID]           INT          NULL,
+    [Priority]               INT          NULL,
+    [OldVal_Priority]        INT          NULL,
+    [AutoIndexing]           TINYINT      NULL,
+    [OldVal_AutoIndexing]    TINYINT      NULL,
+    [Deleted]                TINYINT      NULL,
+    [OldVal_Deleted]         TINYINT      NULL,
+    [CreatedDT]              DATETIME     NULL,
+    [OldVal_CreatedDT]       DATETIME     NULL,
+    [CreatedByID]            INT          NULL,
+    [OldVal_CreatedByID]     INT          NULL,
+    [ModifiedDT]             DATETIME     NULL,
+    [OldVal_ModifiedDT]      DATETIME     NULL,
+    [ModifiedByID]           INT          NULL,
+    [OldVal_ModifiedByID]    INT          NULL,
+    [CTLegacyID]             INT          NULL,
+    [OldVal_CTLegacyID]      INT          NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[EndState-ODRMarket] (
+    [CMSMARKETCODE]       VARCHAR (50) NULL,
+    [ODRCMSC_CPTK_MKTCOD] VARCHAR (50) NULL
+);
+

@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[NLSCSRFRawData] AS TABLE (
+    [NLSRawData] VARCHAR (MAX) NULL);
+

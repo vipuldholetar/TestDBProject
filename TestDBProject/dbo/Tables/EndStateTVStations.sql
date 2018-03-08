@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[EndStateTVStations] (
+    [NTSEQ]         VARCHAR (50) NULL,
+    [NTCHNAM]       VARCHAR (50) NULL,
+    [NTNETWK]       VARCHAR (50) NULL,
+    [NTCITY]        VARCHAR (50) NULL,
+    [NTFULLN]       VARCHAR (50) NULL,
+    [NT_PR_BEGDATE] VARCHAR (50) NULL,
+    [NT_PR_ENDDATE] VARCHAR (50) NULL,
+    [NTOLDCL]       VARCHAR (50) NULL,
+    [NTCABLE]       VARCHAR (50) NULL,
+    [NT_ETH_GRP_ID] VARCHAR (50) NULL
+);
+

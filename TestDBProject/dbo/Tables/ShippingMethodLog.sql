@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[ShippingMethodLog] (
+    [LogTimeStamp]              DATETIME     NULL,
+    [LogDMLOperation]           CHAR (1)     NULL,
+    [LoginUser]                 VARCHAR (32) NULL,
+    [ShippingMethodID]          INT          NULL,
+    [ShipperID]                 INT          NULL,
+    [OldVal_ShipperID]          INT          NULL,
+    [ShipmentMethodName]        VARCHAR (50) NULL,
+    [OldVal_ShipmentMethodName] VARCHAR (50) NULL,
+    [IndNeedTrackingNo]         TINYINT      NULL,
+    [OldVal_IndNeedTrackingNo]  TINYINT      NULL,
+    [IndWeightBasedCost]        TINYINT      NULL,
+    [OldVal_IndWeightBasedCost] TINYINT      NULL,
+    [CreatedDT]                 DATETIME     NULL,
+    [OldVal_CreatedDT]          DATETIME     NULL,
+    [CreatedByID]               INT          NULL,
+    [OldVal_CreatedByID]        INT          NULL,
+    [ModifiedDT]                DATETIME     NULL,
+    [OldVal_ModifiedDT]         DATETIME     NULL,
+    [ModifiedByID]              INT          NULL,
+    [OldVal_ModifiedByID]       INT          NULL,
+    [MTLegacyCodeID]            INT          NULL,
+    [OldVal_MTLegacyCodeID]     INT          NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

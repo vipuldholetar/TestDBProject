@@ -1,0 +1,7 @@
+﻿CREATE LOGIN [MT3\chorton]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+
+
+GO
+ALTER LOGIN [MT3\chorton] DISABLE;
+

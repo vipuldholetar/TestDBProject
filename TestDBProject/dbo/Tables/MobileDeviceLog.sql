@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[MobileDeviceLog] (
+    [LogTimeStamp]           DATETIME     NULL,
+    [LogDMLOperation]        CHAR (1)     NULL,
+    [LoginUser]              VARCHAR (32) NULL,
+    [MobileDeviceID]         INT          NULL,
+    [Category]               VARCHAR (24) NULL,
+    [OldVal_Category]        VARCHAR (24) NULL,
+    [Name]                   VARCHAR (48) NULL,
+    [OldVal_Name]            VARCHAR (48) NULL,
+    [Manufacturer]           VARCHAR (24) NULL,
+    [OldVal_Manufacturer]    VARCHAR (24) NULL,
+    [Model]                  VARCHAR (24) NULL,
+    [OldVal_Model]           VARCHAR (24) NULL,
+    [OperatingSystem]        VARCHAR (24) NULL,
+    [OldVal_OperatingSystem] VARCHAR (24) NULL,
+    [Active]                 TINYINT      NULL,
+    [OldVal_Active]          TINYINT      NULL,
+    [CreatedDT]              DATETIME     NULL,
+    [OldVal_CreatedDT]       DATETIME     NULL,
+    [ModifiedDT]             DATETIME     NULL,
+    [OldVal_ModifiedDT]      DATETIME     NULL,
+    [CTLegacySeq]            NCHAR (10)   NULL,
+    [OldVal_CTLegacySeq]     INT          NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

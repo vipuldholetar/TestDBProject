@@ -1,0 +1,77 @@
+﻿-- =============================================   
+-- Author:    Govardhan   
+-- Create date: 05/22/2015   
+-- Description: fUNCTION TO ROUND OFF END TIME.  
+-- Query :   
+/*  
+
+SELECT NIELSONRoundOffEndTime '',  
+
+*/ 
+
+
+CREATE FUNCTION NIELSONRoundOffEndTime(@ENDTIME VARCHAR(50))
+
+returns VARCHAR(4)
+
+AS
+
+	BEGIN
+
+	DECLARE @ENDTIMEInt AS INT,@MULTIPLIER AS INT,@REMAINDER AS INT,@ENDTIMERETURN AS VARCHAR(50);
+
+	SET @ENDTIMEInt=SUBSTRING(@ENDTIME,3,2);
+
+	SELECT @MULTIPLIER=@ENDTIMEInt/15;
+
+	SELECT @REMAINDER=@ENDTIMEInt%15;
+
+	IF(@REMAINDER<8)
+
+	BEGIN
+
+	    IF(@MULTIPLIER=0)
+
+		 BEGIN
+
+		 	select @ENDTIMERETURN=SUBSTRING(@ENDTIME,1,2)+'00';
+
+		 END
+
+		 ELSE 
+
+		 BEGIN
+
+		 	select @ENDTIMERETURN=SUBSTRING(@ENDTIME,1,2)+CONVERT(VARCHAR(2),(@MULTIPLIER*15));
+
+		 END
+
+	END
+
+	ELSE 
+
+	BEGIN
+
+	     if(@MULTIPLIER=3)
+
+		 begin
+
+		 	select @ENDTIMERETURN= REPLACE(CONVERT(VARCHAR(5), (DATEADD(MINUTE,((15-@REMAINDER-1)),CAST(SUBSTRING(@ENDTIME, 1, 2) + ':' + SUBSTRING(@ENDTIME, 3, 2) AS DATETIME ))), 108), ':', '')
+
+		 end
+
+		 else
+
+		 begin
+
+		 select @ENDTIMERETURN= REPLACE(CONVERT(VARCHAR(5), (DATEADD(MINUTE,((15-@REMAINDER)),CAST(SUBSTRING(@ENDTIME, 1, 2) + ':' + SUBSTRING(@ENDTIME, 3, 2) AS DATETIME ))), 108), ':', '')
+
+		 end
+
+
+
+	END
+
+	RETURN @ENDTIMERETURN;
+
+END

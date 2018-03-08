@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [MTMOBAY\acole]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

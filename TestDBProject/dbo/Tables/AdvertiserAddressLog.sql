@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[AdvertiserAddressLog] (
+    [LogTimeStamp]        DATETIME     NULL,
+    [LogDMLOperation]     CHAR (1)     NULL,
+    [LoginUser]           VARCHAR (32) NULL,
+    [AdvertiserAddressID] INT          NULL,
+    [AdvertiserID]        INT          NULL,
+    [OldVal_AdvertiserID] INT          NULL,
+    [Address1]            VARCHAR (50) NULL,
+    [OldVal_Address1]     VARCHAR (50) NULL,
+    [Address2]            VARCHAR (50) NULL,
+    [OldVal_Address2]     VARCHAR (50) NULL,
+    [City]                VARCHAR (50) NULL,
+    [OldVal_City]         VARCHAR (50) NULL,
+    [State]               VARCHAR (10) NULL,
+    [OldVal_State]        VARCHAR (10) NULL,
+    [ZipCode]             VARCHAR (10) NULL,
+    [OldVal_ZipCode]      VARCHAR (10) NULL,
+    [CreatedDT]           DATETIME     NULL,
+    [OldVal_CreatedDT]    DATETIME     NULL,
+    [CreatedByID]         INT          NULL,
+    [OldVal_CreatedByID]  INT          NULL,
+    [ModifiedDT]          DATETIME     NULL,
+    [OldVal_ModifiedDT]   DATETIME     NULL,
+    [ModifiedByID]        INT          NULL,
+    [OldVal_ModifiedByID] INT          NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

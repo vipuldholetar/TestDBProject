@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[EndState-Market-Hide] (
+    [MarketId]                               VARCHAR (250) NULL,
+    [Description]                            VARCHAR (250) NULL,
+    [NielsenDMAName]                         VARCHAR (250) NULL,
+    [State]                                  VARCHAR (250) NULL,
+    [Region]                                 VARCHAR (250) NULL,
+    [Country]                                VARCHAR (250) NULL,
+    [Display Market in Select Media Streams] VARCHAR (250) NULL,
+    [Promotion (Translation Only)]           VARCHAR (250) NULL,
+    [Brand (Translation Only)]               VARCHAR (250) NULL,
+    [Ingestion Data (for testing)]           VARCHAR (250) NULL,
+    [Kim Comments - additional]              VARCHAR (500) NULL,
+    [Start Date]                             VARCHAR (250) NULL,
+    [EndDate]                                VARCHAR (250) NULL,
+    [FK_CTLegacyLMKTCOD]                     VARCHAR (250) NULL,
+    [FK_CTLegacyLPRCENT]                     VARCHAR (250) NULL,
+    [FK_CTLegacyLTYPE]                       VARCHAR (250) NULL,
+    [FK_CTLegacyLWSJREG]                     VARCHAR (250) NULL,
+    [FK_MTLegacyMktId]                       VARCHAR (250) NULL,
+    [FK_MTLegacyRegionId]                    VARCHAR (250) NULL,
+    [FK_MTLegacyRegionDescription]           VARCHAR (250) NULL,
+    [FK_MTLegacyAdamsEmailTrainingIndicator] VARCHAR (250) NULL,
+    [Market ID (retiring row)]               VARCHAR (250) NULL
+);
+

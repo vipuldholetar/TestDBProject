@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[MTODRMarketMapLogStaging_XXX] (
+    [LogTimeStamp]            DATETIME      NULL,
+    [LogDMLOperation]         CHAR (1)      NULL,
+    [LoginUser]               VARCHAR (32)  NULL,
+    [MTODRMarketMapID]        INT           NULL,
+    [MarketID]                INT           NULL,
+    [OldVal_MarketID]         INT           NULL,
+    [CMSMarketCODE]           VARCHAR (200) NULL,
+    [OldVal_CMSMarketCODE]    VARCHAR (200) NULL,
+    [CMSMarketName]           VARCHAR (200) NULL,
+    [OldVal_CMSMarketName]    VARCHAR (200) NULL,
+    [EffectiveStartDT]        DATETIME      NULL,
+    [OldVal_EffectiveStartDT] DATETIME      NULL,
+    [EffectiveEndDT]          DATETIME      NULL,
+    [OldVal_EffectiveEndDT]   DATETIME      NULL,
+    [CreatedDT]               DATETIME      NULL,
+    [OldVal_CreatedDT]        DATETIME      NULL,
+    [CreatedByID]             INT           NULL,
+    [OldVal_CreatedByID]      INT           NULL,
+    [ModifiedDT]              DATETIME      NULL,
+    [OldVal_ModifiedDT]       DATETIME      NULL,
+    [ModifiedByID]            INT           NULL,
+    [OldVal_ModifiedByID]     INT           NULL
+);
+

@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[RawTVPlaylistLog] (
+    [LogTimeStamp]              DATETIME      NULL,
+    [LogDMLOperation]           CHAR (1)      NULL,
+    [LoginUser]                 VARCHAR (32)  NULL,
+    [RawTVPlaylistID]           BIGINT        NULL,
+    [PatternCODE]               VARCHAR (200) NULL,
+    [OldVal_PatternCODE]        VARCHAR (200) NULL,
+    [InputFileName]             VARCHAR (200) NULL,
+    [OldVal_InputFileName]      VARCHAR (200) NULL,
+    [CaptureStationCODE]        VARCHAR (200) NULL,
+    [OldVal_CaptureStationCODE] VARCHAR (200) NULL,
+    [AirDateTime]               DATETIME      NULL,
+    [OldVal_AirDateTime]        DATETIME      NULL,
+    [CaptureTime]               TIME (7)      NULL,
+    [OldVal_CaptureTime]        TIME (7)      NULL,
+    [Length]                    INT           NULL,
+    [OldVal_Length]             INT           NULL,
+    [CreatedDT]                 DATETIME      NULL,
+    [OldVal_CreatedDT]          DATETIME      NULL,
+    [IngestionDT]               DATETIME      NULL,
+    [OldVal_IngestionDT]        DATETIME      NULL,
+    [IngestionStatus]           INT           NULL,
+    [OldVal_IngestionStatus]    INT           NULL,
+    [Station]                   VARCHAR (10)  NULL,
+    [OldVal_Station]            VARCHAR (10)  NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

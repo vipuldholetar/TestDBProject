@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [ADCOMPARISONS\sschulte]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

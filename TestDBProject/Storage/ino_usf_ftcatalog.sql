@@ -1,0 +1,4 @@
+﻿CREATE FULLTEXT CATALOG [ino_usf_ftcatalog]
+    WITH ACCENT_SENSITIVITY = ON
+    AUTHORIZATION [dbo];
+

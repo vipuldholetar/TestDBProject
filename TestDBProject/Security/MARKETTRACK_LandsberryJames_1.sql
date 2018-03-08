@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [MARKETTRACK\LandsberryJames]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

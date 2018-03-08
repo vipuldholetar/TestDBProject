@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[RCSAdvLog] (
+    [LogTimeStamp]               DATETIME     NULL,
+    [LogDMLOperation]            CHAR (1)     NULL,
+    [LoginUser]                  VARCHAR (32) NULL,
+    [RCSAdvID]                   INT          NULL,
+    [OldValue_RCSAdvID]          INT          NULL,
+    [Name]                       VARCHAR (50) NULL,
+    [OldValue_Name]              VARCHAR (50) NULL,
+    [RCSSeqForCreation]          BIGINT       NULL,
+    [OldValue_RCSSeqForCreation] BIGINT       NULL,
+    [CreatedDT]                  DATETIME     NULL,
+    [OldValue_CreatedDT]         DATETIME     NULL,
+    [CreatedByID]                INT          NULL,
+    [OldValue_CreatedByID]       INT          NULL,
+    [RCSSeqForUpdate]            BIGINT       NULL,
+    [OldValue_RCSSeqForUpdate]   BIGINT       NULL,
+    [ModifiedDT]                 DATETIME     NULL,
+    [OldValue_ModifiedDT]        DATETIME     NULL,
+    [ModifiedByID]               INT          NULL,
+    [OldValue_ModifiedByID]      INT          NULL,
+    [CTLegacyID]                 INT          NULL,
+    [OldValue_CTLegacyID]        INT          NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

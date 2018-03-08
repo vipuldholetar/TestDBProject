@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[CreativeDetailSOCLog] (
+    [LogTimeStamp]        DATETIME       NULL,
+    [LogDMLOperation]     CHAR (1)       NULL,
+    [LoginUser]           VARCHAR (32)   NULL,
+    [CreativeDetailSOCID] INT            NULL,
+    [CreativeMasterID]    INT            NULL,
+    [CreativeAssetName]   VARCHAR (MAX)  NULL,
+    [CreativeRepository]  VARCHAR (MAX)  NULL,
+    [LegacyAssetName]     VARCHAR (MAX)  NULL,
+    [CreativeFileType]    VARCHAR (MAX)  NULL,
+    [CreativeFileSize]    INT            NULL,
+    [CreativeFileDate]    DATETIME       NULL,
+    [Deleted]             BIT            NULL,
+    [PageNumber]          INT            NULL,
+    [PageTypeID]          VARCHAR (50)   NULL,
+    [PixelHeight]         INT            NULL,
+    [PixelWidth]          INT            NULL,
+    [SizeID]              INT            NULL,
+    [FormName]            NVARCHAR (MAX) NULL,
+    [PageStartDT]         DATETIME       NULL,
+    [PageEndDT]           DATETIME       NULL,
+    [PageName]            VARCHAR (50)   NULL,
+    [PubPageNumber]       INT            NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

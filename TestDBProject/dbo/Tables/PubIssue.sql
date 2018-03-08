@@ -1,0 +1,47 @@
+﻿CREATE TABLE [dbo].[PubIssue] (
+    [PubIssueID]             INT           IDENTITY (1, 1) NOT NULL,
+    [EnvelopeID]             INT           NULL,
+    [SenderID]               INT           NOT NULL,
+    [PubEditionID]           INT           NOT NULL,
+    [ShippingMethodID]       INT           NULL,
+    [PackageTypeID]          INT           NULL,
+    [IssueDate]              DATETIME      NOT NULL,
+    [TrackingNumber]         VARCHAR (100) NULL,
+    [PrintedWeight]          FLOAT (53)    NULL,
+    [ActualWeight]           FLOAT (53)    NULL,
+    [PackageAssignment]      VARCHAR (MAX) NULL,
+    [NoTakeReason]           VARCHAR (50)  NULL,
+    [CpnOccurrenceID]        INT           NULL,
+    [FK_PubSection]          INT           NULL,
+    [ReceiveOn]              DATE          NULL,
+    [ReceiveBy]              VARCHAR (MAX) NULL,
+    [IssueCompleteIndicator] TINYINT       NULL,
+    [IssueAuditedIndicator]  TINYINT       NULL,
+    [Status]                 VARCHAR (MAX) NULL,
+    [IsQuery]                TINYINT       NULL,
+    [QueryCategory]          VARCHAR (MAX) NULL,
+    [QueryText]              VARCHAR (MAX) NULL,
+    [QryRaisedBy]            VARCHAR (MAX) NULL,
+    [QryRaisedOn]            DATETIME      NULL,
+    [QueryAnswer]            VARCHAR (MAX) NULL,
+    [QryAnsweredBy]          VARCHAR (MAX) NULL,
+    [QryAnsweredOn]          DATETIME      NULL,
+    [AuditBy]                VARCHAR (MAX) NULL,
+    [AuditDTM]               VARCHAR (MAX) NULL,
+    [CreateDTM]              DATETIME      NOT NULL,
+    [CreateBy]               INT           NOT NULL,
+    [ModifiedDTM]            DATETIME      NULL,
+    [ModifiedBy]             INT           NULL,
+    [CTLegacySEQ]            INT           NULL,
+    CONSTRAINT [PK_PubIssue] PRIMARY KEY CLUSTERED ([PubIssueID] ASC),
+    CONSTRAINT [FK_PubIssue_ENVELOPE] FOREIGN KEY ([EnvelopeID]) REFERENCES [dbo].[Envelope] ([EnvelopeID]),
+    CONSTRAINT [FK_PubIssue_PackageType] FOREIGN KEY ([PackageTypeID]) REFERENCES [dbo].[PackageType] ([PackageTypeID]),
+    CONSTRAINT [FK_PubIssue_PubEdition] FOREIGN KEY ([PubEditionID]) REFERENCES [dbo].[PubEdition] ([PubEditionID]),
+    CONSTRAINT [FK_PubIssue_Sender] FOREIGN KEY ([SenderID]) REFERENCES [dbo].[Sender] ([SenderID]),
+    CONSTRAINT [FK_PubIssue_ShippingMethod] FOREIGN KEY ([ShippingMethodID]) REFERENCES [dbo].[ShippingMethod] ([ShippingMethodID])
+);
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'Primary Key For PubIssue ', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'PubIssue', @level2type = N'COLUMN', @level2name = N'PubIssueID';
+

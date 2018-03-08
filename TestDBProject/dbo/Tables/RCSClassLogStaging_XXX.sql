@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[RCSClassLogStaging_XXX] (
+    [LogTimeStamp]               DATETIME     NULL,
+    [LogDMLOperation]            CHAR (1)     NULL,
+    [LoginUser]                  VARCHAR (32) NULL,
+    [RCSClassID]                 INT          NULL,
+    [OldValue_RCSClassID]        INT          NULL,
+    [Name]                       VARCHAR (50) NULL,
+    [OldValue_Name]              VARCHAR (50) NULL,
+    [Deleted]                    TINYINT      NULL,
+    [OldValue_Deleted]           TINYINT      NULL,
+    [RCSSeqForCreation]          BIGINT       NULL,
+    [OldValue_RCSSeqForCreation] BIGINT       NULL,
+    [CreatedDT]                  DATETIME     NULL,
+    [OldValue_CreatedDT]         DATETIME     NULL,
+    [CreatedByID]                INT          NULL,
+    [OldValue_CreatedByID]       INT          NULL,
+    [RCSSeqForUpdate]            BIGINT       NULL,
+    [OldValue_RCSSeqForUpdate]   BIGINT       NULL,
+    [ModifiedDT]                 DATETIME     NULL,
+    [OldValue_ModifiedDT]        DATETIME     NULL,
+    [ModifiedByID]               INT          NULL,
+    [OldValue_ModifiedByID]      INT          NULL,
+    [CTLegacyID]                 INT          NULL,
+    [OldValue_CTLegacyID]        INT          NULL,
+    [Priority]                   INT          NULL
+);
+

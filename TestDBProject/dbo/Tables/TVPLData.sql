@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[TVPLData] (
+    [TVPLDataID]   INT       IDENTITY (1, 1) NOT NULL,
+    [PlayListData] CHAR (10) NOT NULL,
+    CONSTRAINT [PK_TVPLData] PRIMARY KEY CLUSTERED ([TVPLDataID] ASC)
+);
+

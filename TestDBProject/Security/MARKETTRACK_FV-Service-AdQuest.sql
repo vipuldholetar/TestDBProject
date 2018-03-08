@@ -1,0 +1,2 @@
+﻿CREATE USER [MARKETTRACK\FV-Service-AdQuest] FOR LOGIN [MARKETTRACK\FV-Service-AdQuest];
+

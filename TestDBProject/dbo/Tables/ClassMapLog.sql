@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[ClassMapLog] (
+    [LogTimeStamp]        DATETIME     NULL,
+    [LogDMLOperation]     CHAR (1)     NULL,
+    [LoginUser]           VARCHAR (32) NULL,
+    [ClassMapID]          INT          NULL,
+    [RCSClassId]          INT          NULL,
+    [OldVal_RCSClassId]   INT          NULL,
+    [CatID]               INT          NULL,
+    [OldVal_CatID]        INT          NULL,
+    [AutoIndexing]        INT          NULL,
+    [OldVal_AutoIndexing] INT          NULL,
+    [Priority]            INT          NULL,
+    [OldVal_Priority]     INT          NULL,
+    [IsDeleted]           BIT          NULL,
+    [OldVal_IsDeleted]    BIT          NULL,
+    [CreateDate]          DATETIME     NULL,
+    [OldVal_CreateDate]   DATETIME     NULL,
+    [CreatedBy]           INT          NULL,
+    [OldVal_CreatedBy]    INT          NULL,
+    [ModifiedDate]        DATETIME     NULL,
+    [OldVal_ModifiedDate] DATETIME     NULL,
+    [ModifiedBy]          INT          NULL,
+    [OldVal_ModifiedBy]   INT          NULL,
+    [CTLegacyID]          INT          NULL,
+    [OldVal_CTLegacyID]   INT          NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

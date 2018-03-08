@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[MobileJobScheduleLog] (
+    [LogTimeStamp]                 DATETIME     NULL,
+    [LogDMLOperation]              CHAR (1)     NULL,
+    [LoginUser]                    VARCHAR (32) NULL,
+    [MobileJobScheduleID]          INT          NULL,
+    [MobileTrackingMediaID]        INT          NULL,
+    [OldVal_MobileTrackingMediaID] INT          NULL,
+    [DayOfWeek]                    NUMERIC (1)  NULL,
+    [OldVal_DayOfWeek]             NUMERIC (1)  NULL,
+    [StartTime]                    CHAR (8)     NULL,
+    [OldVal_StartTime]             CHAR (8)     NULL,
+    [Frequency]                    INT          NULL,
+    [OldVal_Frequency]             INT          NULL,
+    [StartDate]                    DATE         NULL,
+    [OldVal_StartDate]             DATE         NULL,
+    [EndDate]                      DATE         NULL,
+    [OldVal_EndDate]               DATE         NULL,
+    [MobileDeviceID]               INT          NULL,
+    [OldVal_MobileDeviceID]        INT          NULL,
+    [Priority]                     NUMERIC (1)  NULL,
+    [OldVal_Priority]              NUMERIC (1)  NULL,
+    [CreateDT]                     DATETIME     NULL,
+    [OldVal_CreateDT]              DATETIME     NULL,
+    [ModifyDT]                     DATETIME     NULL,
+    [OldVal_ModifyDT]              DATETIME     NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

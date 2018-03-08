@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[ConfigurationLog] (
+    [LogTimeStamp]         DATETIME      NULL,
+    [LogDMLOperation]      CHAR (1)      NULL,
+    [LoginUser]            VARCHAR (32)  NULL,
+    [ConfigurationID]      INT           NULL,
+    [EffectiveDT]          DATETIME      NULL,
+    [OldVal_EffectiveDT]   DATETIME      NULL,
+    [EndDT]                DATETIME      NULL,
+    [OldVal_EndDT]         DATETIME      NULL,
+    [SystemName]           VARCHAR (50)  NULL,
+    [OldVal_SystemName]    VARCHAR (50)  NULL,
+    [ComponentName]        VARCHAR (50)  NULL,
+    [OldVal_ComponentName] VARCHAR (50)  NULL,
+    [Value]                VARCHAR (50)  NULL,
+    [OldVal_Value]         VARCHAR (50)  NULL,
+    [ValueTitle]           VARCHAR (100) NULL,
+    [OldVal_ValueTitle]    VARCHAR (100) NULL,
+    [ValueGroup]           VARCHAR (50)  NULL,
+    [OldVal_ValueGroup]    VARCHAR (50)  NULL,
+    [ValueType]            VARCHAR (50)  NULL,
+    [OldVal_ValueType]     VARCHAR (50)  NULL,
+    [Notes]                VARCHAR (200) NULL,
+    [OldVal_Notes]         VARCHAR (200) NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[RadioDayPartLog] (
+    [LogTimeStamp]        DATETIME      NULL,
+    [LogDMLOperation]     CHAR (1)      NULL,
+    [LoginUser]           VARCHAR (32)  NULL,
+    [RadioDayPartID]      INT           NULL,
+    [Day]                 VARCHAR (100) NULL,
+    [OldVal_Day]          VARCHAR (100) NULL,
+    [DayPart]             VARCHAR (100) NULL,
+    [OldVal_DayPart]      VARCHAR (100) NULL,
+    [Descrip]             VARCHAR (MAX) NULL,
+    [OldVal_Descrip]      VARCHAR (MAX) NULL,
+    [StartTime]           DATETIME      NULL,
+    [OldVal_StartTime]    DATETIME      NULL,
+    [EndTime]             DATETIME      NULL,
+    [OldVal_EndTime]      DATETIME      NULL,
+    [CreatedDT]           DATETIME      NULL,
+    [OldVal_CreatedDT]    DATETIME      NULL,
+    [CreatedByID]         INT           NULL,
+    [OldVal_CreatedByID]  INT           NULL,
+    [ModifiedDT]          DATETIME      NULL,
+    [OldVal_ModifiedDT]   DATETIME      NULL,
+    [ModifiedByID]        INT           NULL,
+    [OldVal_ModifiedByID] INT           NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

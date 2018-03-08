@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[RCSRadioStationDataBA] (
+    [RDRCSStationID] NVARCHAR (255) NULL,
+    [RDCHNAM]        NVARCHAR (255) NULL,
+    [RDCITY]         NVARCHAR (255) NULL,
+    [RDETHFL]        NVARCHAR (255) NULL,
+    [RDFULLN]        NVARCHAR (255) NULL,
+    [RDPRBeginDT]    NVARCHAR (255) NULL,
+    [RDPREndDT]      NVARCHAR (255) NULL,
+    [RD_AM_OR_FM]    NVARCHAR (255) NULL
+);
+

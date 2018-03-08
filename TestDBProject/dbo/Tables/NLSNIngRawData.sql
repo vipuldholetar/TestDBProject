@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[NLSNIngRawData] (
+    [NLSNIngRawDataID] UNIQUEIDENTIFIER NOT NULL,
+    [Value]            NVARCHAR (MAX)   NOT NULL,
+    CONSTRAINT [PK_NLSIngRawData] PRIMARY KEY CLUSTERED ([NLSNIngRawDataID] ASC)
+);
+

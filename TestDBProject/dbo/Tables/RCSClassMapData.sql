@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[RCSClassMapData] (
+    [RCSCLSSeq]   NVARCHAR (255) NULL,
+    [RCSCLSClass] NVARCHAR (255) NULL
+);
+

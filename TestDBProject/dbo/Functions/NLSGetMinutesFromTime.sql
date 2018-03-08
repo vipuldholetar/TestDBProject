@@ -1,0 +1,32 @@
+﻿-- =============================================   
+-- Author:    Govardhan   
+-- Create date: 05/22/2015   
+-- Description: fUNCTION TO GET MINUTES FROM TIME
+-- Query :   
+/*  
+
+SELECT DBO.NLSGetMinutesFromTime('2000','2059')  
+
+*/ 
+
+CREATE FUNCTION NLSGetMinutesFromTime(@STARTTIME VARCHAR(50),@ENDTIME VARCHAR(50))
+
+returns INT
+AS
+
+	BEGIN
+		DECLARE @MINUTES AS INT,@REMAINDER AS INT,@DIVIDENT AS INT;;
+	select @MINUTES=LTRIM(DATEDIFF(MINUTE, 0, (CAST((SUBSTRING(@ENDTIME, 1, 2) + ':' +SUBSTRING(@ENDTIME, 3, 2)) AS DATETIME)-
+      CAST((SUBSTRING(@STARTTIME, 1, 2) + ':' +SUBSTRING(@STARTTIME, 3, 2)) AS DATETIME)))) ;
+     
+    SET @DIVIDENT=@MINUTES/15;
+
+	SELECT @REMAINDER=@MINUTES%15;
+	IF(@REMAINDER>0)
+	BEGIN
+	SET @DIVIDENT=@DIVIDENT+1;
+	END
+		
+	RETURN @DIVIDENT;
+
+END

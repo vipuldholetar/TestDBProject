@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[LanguageLog] (
+    [LogTimeStamp]              DATETIME       NULL,
+    [LogDMLOperation]           CHAR (1)       NULL,
+    [LoginUser]                 VARCHAR (32)   NULL,
+    [LanguageID]                INT            NULL,
+    [Description]               VARCHAR (50)   NULL,
+    [OldVal_Description]        VARCHAR (50)   NULL,
+    [EthnicGroupID]             INT            NULL,
+    [OldVal_EthnicGroupID]      INT            NULL,
+    [MTLegacyLanguageID]        INT            NULL,
+    [OldVal_MTLegacyLanguageID] INT            NULL,
+    [CTLegacyLanguageID]        INT            NULL,
+    [OldVal_CTLegacyLanguageID] INT            NULL,
+    [Notes]                     NVARCHAR (MAX) NULL,
+    [OldVal_Notes]              NVARCHAR (MAX) NULL,
+    [CreatedDT]                 DATETIME       NULL,
+    [OldVal_CreatedDT]          DATETIME       NULL,
+    [CreatedByID]               INT            NULL,
+    [OldVal_CreatedByID]        INT            NULL,
+    [ModifiedDT]                DATETIME       NULL,
+    [OldVal_ModifiedDT]         DATETIME       NULL,
+    [ModifiedByID]              INT            NULL,
+    [OldVal_ModifiedByID]       INT            NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+

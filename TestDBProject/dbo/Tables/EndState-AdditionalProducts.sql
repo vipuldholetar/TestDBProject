@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[EndState-AdditionalProducts] (
+    [PRSEQ]           VARCHAR (200) NULL,
+    [PRNAME]          VARCHAR (200) NULL,
+    [PRINST]          VARCHAR (200) NULL,
+    [PRICKE]          VARCHAR (200) NULL,
+    [PRSBCAT]         VARCHAR (200) NULL,
+    [PRCATGY]         VARCHAR (200) NULL,
+    [PRMKT]           VARCHAR (200) NULL,
+    [PRCODE]          VARCHAR (200) NULL,
+    [PREDDAT]         VARCHAR (200) NULL,
+    [PRNATLO]         VARCHAR (200) NULL,
+    [PRCDATE]         VARCHAR (200) NULL,
+    [PRISKEY]         VARCHAR (200) NULL,
+    [PRIGRP]          VARCHAR (200) NULL,
+    [PREINIT]         VARCHAR (200) NULL,
+    [PRIBM]           VARCHAR (200) NULL,
+    [PREDTIM]         VARCHAR (200) NULL,
+    [PRWEB]           VARCHAR (200) NULL,
+    [PR_INSTCOD]      VARCHAR (200) NULL,
+    [PR_PSBCCOD]      VARCHAR (200) NULL,
+    [PR_RETIRE_DATE]  VARCHAR (200) NULL,
+    [PR_RETIRE_INITS] VARCHAR (200) NULL,
+    [PRSHORTNAME]     VARCHAR (200) NULL,
+    [PR_ONEMT_SEQ]    VARCHAR (200) NULL
+);
+

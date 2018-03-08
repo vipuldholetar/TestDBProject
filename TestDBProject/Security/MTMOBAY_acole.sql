@@ -1,0 +1,2 @@
+﻿CREATE USER [MTMOBAY\acole] FOR LOGIN [MTMOBAY\acole];
+

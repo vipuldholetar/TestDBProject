@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[COMWebsiteLog] (
+    [LogTimeStamp]            DATETIME      NULL,
+    [LogDMLOperation]         CHAR (1)      NULL,
+    [LoginUser]               VARCHAR (32)  NULL,
+    [COMWebsiteID]            INT           NULL,
+    [SiteName]                VARCHAR (100) NULL,
+    [OldVal_SiteName]         VARCHAR (100) NULL,
+    [ParentSiteID]            INT           NULL,
+    [OldVal_ParentSiteID]     INT           NULL,
+    [SiteUrl]                 VARCHAR (255) NULL,
+    [OldVal_SiteUrl]          VARCHAR (255) NULL,
+    [MarketID]                INT           NULL,
+    [OldVal_MarketID]         INT           NULL,
+    [EthnicLanguageID]        INT           NULL,
+    [OldVal_EthnicLanguageID] INT           NULL,
+    [SiteGenreID]             INT           NULL,
+    [OldVal_SiteGenreID]      INT           NULL,
+    [CreatedDT]               DATETIME      NULL,
+    [OldVal_CreatedDT]        DATETIME      NULL,
+    [CreatedByID]             INT           NULL,
+    [OldVal_CreatedByID]      INT           NULL,
+    [ModifiedDT]              DATETIME      NULL,
+    [OldVal_ModifiedDT]       DATETIME      NULL,
+    [ModifiedByID]            INT           NULL,
+    [OldVal_ModifiedByID]     INT           NULL,
+    CHECK ([LogDMLOperation]='U' OR [LogDMLOperation]='I' OR [LogDMLOperation]='D')
+);
+
